@@ -1,0 +1,4 @@
+config_path: spec/javascripts
+config_file: config.coffee
+startup_timeout: 10
+port: 7000

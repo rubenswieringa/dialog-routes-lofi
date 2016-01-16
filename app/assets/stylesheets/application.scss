@@ -1,0 +1,38 @@
+
+ul.navigation {
+  padding: 10px;
+  overflow: hidden; // contain floating children
+
+  li {
+    display: block;
+    float: left;
+    list-style-type: none;
+  }
+
+  li + li {
+    margin-left: 20px;
+  }
+}
+
+.content {
+  padding: 10px;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.dialog-container {
+  position: relative; // for absolute-positioned children
+
+  &:empty {
+    display: none;
+  }
+}
+
+.dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+}
