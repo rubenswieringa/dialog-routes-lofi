@@ -14,17 +14,18 @@ angular
 .config ( $stateProvider, $urlRouterProvider ) ->
 
   $stateProvider
+
     .state 'calendar',
       url: '/calendar'
-      template: "calendar page"
+      templateUrl: 'templates/calendar.html'
 
     .state 'messages',
       url: '/messages'
-      template: "messages page"
+      templateUrl: 'templates/messages.html'
 
     .state 'dossier',
       url: '/dossier'
-      template: "dossier page"
+      templateUrl: 'templates/dossier.html'
 
   $urlRouterProvider.otherwise '/calendar'
 

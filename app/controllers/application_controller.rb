@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
   def index
     render layout: false
   end
+
+  def template
+    render "templates/#{params[:template]}"
+  end
 end
