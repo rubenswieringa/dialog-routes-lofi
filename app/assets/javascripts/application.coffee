@@ -19,9 +19,23 @@ angular
       url: '/calendar'
       templateUrl: 'templates/calendar.html'
 
+    .state 'calendar.add',
+      url: '/add'
+      views:
+        'dialog@': {
+          templateUrl: 'templates/calendar_dialog.html'
+        }
+
     .state 'messages',
       url: '/messages'
       templateUrl: 'templates/messages.html'
+
+    .state 'messages.add',
+      url: '/add'
+      views:
+        'dialog@': {
+          templateUrl: 'templates/messages_dialog.html'
+        }
 
     .state 'dossier',
       url: '/dossier'

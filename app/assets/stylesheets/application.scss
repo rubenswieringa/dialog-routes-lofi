@@ -15,7 +15,7 @@ ul.navigation {
 }
 
 .content {
-  padding: 10px;
+  padding: 10px 44px;
 
   &:first-letter {
     text-transform: uppercase;
@@ -23,7 +23,12 @@ ul.navigation {
 }
 
 .dialog-container {
-  position: relative; // for absolute-positioned children
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba( black, 0.5 );
 
   &:empty {
     display: none;
@@ -31,8 +36,13 @@ ul.navigation {
 }
 
 .dialog {
+  width: 400px;
+  height: 300px;
+  box-sizing: border-box;
+  padding: 11px 33px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate( -50%, -50% );
+  background-color: white;
 }
