@@ -41,5 +41,12 @@ angular
       url: '/dossier'
       templateUrl: 'templates/dossier.html'
 
+    .state 'letter',
+      url: '/letter'
+      views:
+        'dialog@': {
+          templateUrl: 'templates/letter_dialog.html'
+        }
+
   $urlRouterProvider.otherwise '/calendar'
 
