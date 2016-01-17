@@ -8,7 +8,7 @@ exports.config =
 
   # Spec patterns are relative to the current working directly when
   # protractor is called.
-  specs: [ 'attempt_at_a_spec.coffee' ]
+  specs: [ '*spec.coffee' ]
 
   baseUrl: 'http://localhost:7000'
 
