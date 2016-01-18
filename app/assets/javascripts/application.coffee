@@ -1,10 +1,12 @@
 
 #= require angular/angular.min.js
 #= require angular-ui-router/release/angular-ui-router.min.js
-
+#= require ui-router-extras/release/ct-ui-router-extras.min.js
+#= require_self
+#= require clear_replacing_sticky_states
 
 angular
-.module 'dialogRoutesLoFi', [ 'ui.router' ]
+.module 'dialogRoutesLoFi', [ 'ui.router', 'ct.ui.router.extras' ]
 
 
 .config ( $locationProvider ) ->
@@ -18,6 +20,7 @@ angular
     .state 'calendar',
       url: '/calendar'
       templateUrl: 'templates/calendar.html'
+      sticky: true
 
     .state 'calendar.add',
       url: '/add'
@@ -29,6 +32,7 @@ angular
     .state 'messages',
       url: '/messages'
       templateUrl: 'templates/messages.html'
+      sticky: true
 
     .state 'messages.add',
       url: '/add'
@@ -40,6 +44,7 @@ angular
     .state 'dossier',
       url: '/dossier'
       templateUrl: 'templates/dossier.html'
+      sticky: true
 
     .state 'letter',
       url: '/letter'
