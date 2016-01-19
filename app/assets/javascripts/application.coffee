@@ -3,6 +3,7 @@
 #= require angular-ui-router/release/angular-ui-router.min.js
 #= require ui-router-extras/release/ct-ui-router-extras.min.js
 #= require_self
+#= require load_background_content
 #= require clear_replacing_sticky_states
 
 angular

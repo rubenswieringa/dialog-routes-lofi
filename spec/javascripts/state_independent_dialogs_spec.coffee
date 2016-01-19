@@ -34,6 +34,10 @@ describe 'State-independent dialogs', ->
         dialogHeader = element By.css '.dialog h3'
         expect( dialogHeader.getText() ).toEqual 'Received a letter?'
 
+      it 'opens the dossier page in the background', ->
+        pageHeader = element By.tagName 'h2'
+        expect( pageHeader.getText() ).toEqual 'Dossier page'
+
 
 
   describe 'when navigating between potential parent states', ->
