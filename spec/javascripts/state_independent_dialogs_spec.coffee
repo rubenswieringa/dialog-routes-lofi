@@ -6,8 +6,8 @@ describe 'State-independent dialogs', ->
     describe 'when navigated to through a click', ->
 
       beforeEach ->
-        browser.get '/dossier'
-        link = element By.css '[ui-sref=letter]'
+        browser.get '/person/me/dossier'
+        link = element By.css '[ui-sref$=letter]'
         link.click()
 
       it 'opens the dialog', ->
@@ -25,7 +25,7 @@ describe 'State-independent dialogs', ->
     describe 'when navigated to through a page-load', ->
 
       beforeEach ->
-        browser.get '/letter'
+        browser.get '/person/me/letter'
 
       it 'opens the dialog', ->
         dialog = element.all By.css '.dialog'
@@ -50,15 +50,15 @@ describe 'State-independent dialogs', ->
     it 'are not listed as inactive', ->
       browser.get ''
 
-      link = element By.css '[ui-sref=messages]'
+      link = element By.css '[ui-sref$=messages]'
       link.click()
       expect( browser.executeAsyncScript getInactiveStates ).toEqual []
 
-      link = element By.css '[ui-sref=dossier]'
+      link = element By.css '[ui-sref$=dossier]'
       link.click()
       expect( browser.executeAsyncScript getInactiveStates ).toEqual []
 
-      link = element By.css '[ui-sref=calendar]'
+      link = element By.css '[ui-sref$=calendar]'
       link.click()
       expect( browser.executeAsyncScript getInactiveStates ).toEqual []
 

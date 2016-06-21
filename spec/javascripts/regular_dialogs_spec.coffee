@@ -6,7 +6,7 @@ describe 'Regular dialogs', ->
     describe 'when navigated to through a click', ->
 
       beforeEach ->
-        browser.get '/calendar'
+        browser.get '/person/me/calendar'
         button = element By.css '.content button[ui-sref]'
         button.click()
 
@@ -35,7 +35,7 @@ describe 'Regular dialogs', ->
     describe 'when navigated to through a page-load', ->
 
       beforeEach ->
-        browser.get '/calendar/add'
+        browser.get '/person/me/calendar/add'
 
       it 'opens the dialog', ->
         dialog = element.all By.css '.dialog'
@@ -65,7 +65,7 @@ describe 'Regular dialogs', ->
     describe 'when navigated to through a click', ->
 
       beforeEach ->
-        browser.get '/messages'
+        browser.get '/person/me/messages'
         button = element By.css '.content button[ui-sref]'
         button.click()
 
@@ -94,7 +94,7 @@ describe 'Regular dialogs', ->
     describe 'when navigated to through a page-load', ->
 
       beforeEach ->
-        browser.get '/messages/add'
+        browser.get '/person/me/messages/add'
 
       it 'opens the dialog', ->
         dialog = element.all By.css '.dialog'

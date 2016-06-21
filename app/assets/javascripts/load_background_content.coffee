@@ -1,6 +1,6 @@
 
 angular
-.module 'dialogRoutesLoFi'
+.module 'dialogRoutesHiFi'
 .run ( $rootScope, $state ) ->
 
   removeListener = $rootScope.$on '$stateChangeStart', ( event, toState, toParams, fromState, fromParams ) ->
@@ -15,5 +15,5 @@ angular
 
     event.preventDefault()
 
-    $state.go( 'dossier', null, location: false, notify: false ).then ->
-      $state.go toState.name, null, location: false
+    $state.go( 'person.dossier', toParams, location: false, notify: false ).then ->
+      $state.go toState.name,    toParams, location: false, notify: true

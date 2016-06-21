@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="dialogRoutesLoFi">
+<html ng-app="dialogRoutesHiFi">
 <head>
   <base href="/" />
   <title>Dialog Routes (lofi)</title>
@@ -8,16 +8,7 @@
 </head>
 <body>
 
-<section>
-  <h1>Dialog Routes</h1>
-  <ul class="navigation">
-    <li><a ui-sref="calendar">Calendar</a></li>
-    <li><a ui-sref="messages">Messages</a></li>
-    <li><a ui-sref="dossier">Dossier</a></li>
-    <li><a ui-sref="letter">Letter</a></li>
-  </ul>
-  <div class="content" ui-view></div>
-</section>
+<div ui-view></div>
 
 <div class="dialog-container" ui-view="dialog"></div>
 

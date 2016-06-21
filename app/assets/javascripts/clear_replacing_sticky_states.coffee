@@ -1,6 +1,6 @@
 
 angular
-.module 'dialogRoutesLoFi'
+.module 'dialogRoutesHiFi'
 .run ( $rootScope, $stickyState ) ->
 
   $rootScope.$on '$stateChangeSuccess', ( event, toState, toParams, fromState, fromParams ) ->
